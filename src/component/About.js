@@ -1,10 +1,13 @@
 import { useState } from "react";
 
 export default function About() {
-  const [about, setAbout] = useState({
-    heading: "",
-    title: "",
-    List: [{}],
+  const [about] = useState({
+    description: `Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
+    aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
+    quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
+    fugiat sit in iste officiis commodi quidem hic quas.`,
+    heading: "UI/UX Designer & Web Developer.",
+    birthday: "1 May 1996",
   });
   return (
     <section id="about" class="about">
@@ -12,10 +15,7 @@ export default function About() {
         <div class="section-title">
           <h2>About</h2>
           <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
+            {about.description}
           </p>
         </div>
 
@@ -24,7 +24,7 @@ export default function About() {
             <img src="assets/img/profile-img.jpg" class="img-fluid" alt="" />
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>UI/UX Designer &amp; Web Developer.</h3>
+            <h3>{about.heading}</h3>
             <p class="font-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -34,7 +34,7 @@ export default function About() {
                 <ul>
                   <li>
                     <i class="bi bi-chevron-right"></i>
-                    <strong>Birthday:</strong> <span>1 May 1995</span>
+                    <strong>Birthday:</strong> <span>{about.birthday}</span>
                   </li>
                   <li>
                     <i class="bi bi-chevron-right"></i>
