@@ -1,30 +1,37 @@
-import "./App.css";
-import Layout from "./Components/Layout";
-// import FrontPage from "./Components/FrontPage";
-// import Resume from "./Components/Resume";
-// import About from "./Components/About";
-// import Skills from "./Components/SKills";
-// import Fact from "./Components/Fact";
-// import Portfolio from "./Components/Portfolio";
-// import ContactPage from "./Components/ContactPage";
-   import Service from "./Components/Service";
-// import Testimonial from "./Components/Testimonial";
+import Layout from "./component/Layout";
+import ContactForm from "./component/ContactForm";
+import About from "./component/About";
+import Fact from "./component/Fact";
+import Skills from "./component/Skills";
+import Resume from "./component/Resume";
+import Portfolio from "./component/Portfolio";
+import Service from "./component/Service";
+import Testimonials from "./component/Testimonials";
+import FirstPage from "./component/FirstPage";
 
 function App() {
-  const Page = (
+  const page = (
     <div>
-      {/* <FrontPage />
+      <FirstPage />
+
       <About />
+
       <Fact />
-      <Resume />
+
       <Skills />
-      <Portfolio /> */}
+
+      <Resume />
+
+      <Portfolio />
+
       <Service />
-      {/* <Testimonial /> */}
-      {/* <ContactPage /> */}
+
+      <Testimonials />
+
+      <ContactForm />
     </div>
   );
-  return <Layout content={Page} />;
+  return <Layout content={page} />;
 }
 
 export default App;
