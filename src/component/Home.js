@@ -1,23 +1,34 @@
-import { useState } from "react";
-export default function FirstPage() {
-  const [firstPage, setFirstPage] = useState({
-    heading: "Hello",
-    name: "Devanshu",
+import { useState , useEffect} from "react";
+import { getHomePage } from "../service/data.service"
+
+export default function Home() {
+    const [data, setData] = useState({});
+    useEffect(() => {
+      const fetchData = async () => {
+        const {data} = await getHomePage();
+        setData(data);
+        // console.log(data);
+      };
+      fetchData();
+    }, []);
+    
+  const [firstPage] = useState({
+   
     links: [
       {
         class: "twitter",
         icon: "bx bxl-twitter",
-        link: "http://google.com",
+        link: "https://twitter.com/?lang=en-in",
       },
       {
         class: "facebook",
         icon: "bx bxl-facebook",
-        link: "http://google.com",
+        link: "https://www.facebook.com",
       },
       {
         class: "instagram",
         icon: "bx bxl-instagram",
-        link: "http://google.com",
+        link: "https://www.instagram.com",
       },
       {
         class: "google",
@@ -27,16 +38,16 @@ export default function FirstPage() {
       {
         class: "linkedin",
         icon: "bx bxl-linkedin",
-        link: "http://google.com",
+        link: "https://www.linkedin.com",
       },
     ],
   });
   return (
     <section id="hero" class="d-flex flex-column justify-content-center">
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
-        <h1>{firstPage.heading}</h1>
+        <h1>{data?.attributes?.title}</h1>
         <p>
-          {firstPage.name}
+          {data?.attributes?.name}
           <span
             class="typed"
             data-typed-items="Designer, Developer, Freelancer, Photographer"
@@ -55,3 +66,4 @@ export default function FirstPage() {
     </section>
   );
 }
+

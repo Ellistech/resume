@@ -7,12 +7,12 @@ import Resume from "./component/Resume";
 import Portfolio from "./component/Portfolio";
 import Service from "./component/Service";
 import Testimonials from "./component/Testimonials";
-import FirstPage from "./component/FirstPage";
+import Home from "./component/Home";
 
 function App() {
   const page = (
     <div>
-      <FirstPage />
+      <Home />
 
       <About />
 

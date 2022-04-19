@@ -6,37 +6,37 @@ export default function Service() {
       icon: "bx bxl-dribbble",
       title: "Lorem Ipsum 1",
       description:
-        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim devamshuu",
+        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
     },
     {
       icon: "bx bxl-dribbble",
       title: "Lorem Ipsum 1",
       description:
-        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim devamshuu",
+        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
     },
     {
       icon: "bx bxl-dribbble",
       title: "Lorem Ipsum 1",
       description:
-        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim devamshuu",
+        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
     },
     {
       icon: "bx bxl-dribbble",
       title: "Lorem Ipsum 1",
       description:
-        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim devamshuu",
+        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
     },
     {
       icon: "bx bxl-dribbble",
       title: "Lorem Ipsum 1",
       description:
-        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim devamshuu",
+        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
     },
     {
       icon: "bx bxl-dribbble",
       title: "Lorem Ipsum 1",
       description:
-        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim devamshuu",
+        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
     },
   ]);
   return (

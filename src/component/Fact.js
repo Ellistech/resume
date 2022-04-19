@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Fact() {
-  const [fact, setFact] = useState([
+  const [fact, ] = useState([
     {
       icon: "bi bi-emoji-smile",
       datacounter: "",

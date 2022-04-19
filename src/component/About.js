@@ -1,21 +1,24 @@
-import { useState } from "react";
+import { useState , useEffect } from "react";
+import { getAbout } from "../service/data.service";
 
 export default function About() {
-  const [about] = useState({
-    description: `Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-    aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-    quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-    fugiat sit in iste officiis commodi quidem hic quas.`,
-    heading: "UI/UX Designer & Web Developer.",
-    birthday: "1 May 1996",
-  });
+  const [data , setData] = useState({});
+useEffect (() => {
+  const fetchData = async () => {
+    const { data } = await getAbout();
+    setData(data);
+    console.log(data);
+  };
+  fetchData();
+}, []);
+
   return (
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>About</h2>
           <p>
-            {about.description}
+            {data?.attributes?.description}
           </p>
         </div>
 
@@ -24,17 +27,16 @@ export default function About() {
             <img src="assets/img/profile-img.jpg" class="img-fluid" alt="" />
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>{about.heading}</h3>
+            <h3>{data?.attributes?.role}</h3>
             <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             {data?.attributes?.subtitle}
             </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
                   <li>
                     <i class="bi bi-chevron-right"></i>
-                    <strong>Birthday:</strong> <span>{about.birthday}</span>
+                    <strong>Birthday:</strong> <span>{data?.attributes?.birthday}</span>
                   </li>
                   <li>
                     <i class="bi bi-chevron-right"></i>
@@ -42,11 +44,11 @@ export default function About() {
                   </li>
                   <li>
                     <i class="bi bi-chevron-right"></i>
-                    <strong>Phone:</strong> <span>+123 456 7890</span>
+                    <strong>Phone:</strong> <span>{data?.attributes?.phone}</span>
                   </li>
                   <li>
                     <i class="bi bi-chevron-right"></i>
-                    <strong>City:</strong> <span>New York, USA</span>
+                    <strong>City:</strong> <span>{data?.attributes?.city}</span>
                   </li>
                 </ul>
               </div>
@@ -54,32 +56,26 @@ export default function About() {
                 <ul>
                   <li>
                     <i class="bi bi-chevron-right"></i> <strong>Age:</strong>
-                    <span>30</span>
+                    <span>{data?.attributes?.age}</span>
                   </li>
                   <li>
                     <i class="bi bi-chevron-right"></i>
-                    <strong>Degree:</strong> <span>Master</span>
+                    <strong>Degree:</strong> <span>{data?.attributes?.degree}</span>
                   </li>
                   <li>
                     <i class="bi bi-chevron-right"></i>
                     <strong>PhEmailone:</strong>
-                    <span>email@example.com</span>
+                    <span>{data?.attributes?.email}</span>
                   </li>
                   <li>
                     <i class="bi bi-chevron-right"></i>
-                    <strong>Freelance:</strong> <span>Available</span>
+                    <strong>Freelance:</strong> <span>{data?.attributes?.freelance}</span>
                   </li>
                 </ul>
               </div>
             </div>
             <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio
-              vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor
-              incidunt officia tempore. Et eius omnis. Cupiditate ut dicta
-              maxime officiis quidem quia. Sed et consectetur qui quia
-              repellendus itaque neque. Aliquid amet quidem ut quaerat
-              cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium
-              dolores.
+             {data?.attributes?.aboutUs}
             </p>
           </div>
         </div>

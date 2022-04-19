@@ -93,14 +93,14 @@ export default function Portfolio() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <ul id="portfolio-flters">
+            {/* <ul id="portfolio-flters">
               <li onClick={()=> filterCards('all')} class="filter-active">
                 All
               </li>
               <li onClick={()=> filterCards('app')}>App</li>
               <li onClick={()=> filterCards('card')}>Card</li>
               <li onClick={()=> filterCards('web')}>Web</li>
-            </ul>
+            </ul> */}
           </div>
         </div>
 

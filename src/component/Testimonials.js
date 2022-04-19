@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Testimonials() {
-  const [testimonial, setTestimonial] = useState([
+  const [testimonial] = useState([
     {
       heading: "Devanshu chauhan",
       title: "Ceo & Founder",
