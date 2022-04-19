@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function NavMenu() {
   return (
     <header id="header" class="d-flex flex-column justify-content-center">
       <nav id="navbar" class="navbar nav-menu">
@@ -14,8 +14,8 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="#resume" class="nav-link scrollto">
-              <i class="bx bx-file-blank"></i> <span>Resume</span>
+            <a href="#testimonials" class="nav-link scrollto">
+              <i class="bx bx-file-blank"></i> <span>Testimonials</span>
             </a>
           </li>
           <li>
@@ -35,7 +35,6 @@ export default function Footer() {
           </li>
         </ul>
       </nav>
-      {/* <!-- .nav-menu --> */}
     </header>
   );
 }

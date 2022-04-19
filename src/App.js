@@ -20,13 +20,14 @@ function App() {
 
       <Skills />
 
-      <Resume />
+      {/* <Resume /> */}
 
       <Portfolio />
+      
+      <Testimonials />
 
       <Service />
 
-      <Testimonials />
 
       <ContactForm />
     </div>

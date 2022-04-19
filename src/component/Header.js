@@ -14,8 +14,8 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="#resume" class="nav-link scrollto">
-              <i class="bx bx-file-blank"></i> <span>aResume</span>
+            <a href="#Testimonial" class="nav-link scrollto">
+              <i class="bx bx-file-blank"></i> <span>Testimonials</span>
             </a>
           </li>
           <li>

@@ -1,47 +1,17 @@
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import { getHomePage } from "../service/data.service"
 
 export default function Home() {
-    const [data, setData] = useState({});
-    useEffect(() => {
-      const fetchData = async () => {
-        const {data} = await getHomePage();
-        setData(data);
-        // console.log(data);
-      };
-      fetchData();
-    }, []);
-    
-  const [firstPage] = useState({
-   
-    links: [
-      {
-        class: "twitter",
-        icon: "bx bxl-twitter",
-        link: "https://twitter.com/?lang=en-in",
-      },
-      {
-        class: "facebook",
-        icon: "bx bxl-facebook",
-        link: "https://www.facebook.com",
-      },
-      {
-        class: "instagram",
-        icon: "bx bxl-instagram",
-        link: "https://www.instagram.com",
-      },
-      {
-        class: "google",
-        icon: "bx bxl-google",
-        link: "http://google.com",
-      },
-      {
-        class: "linkedin",
-        icon: "bx bxl-linkedin",
-        link: "https://www.linkedin.com",
-      },
-    ],
-  });
+  const [data, setData] = useState({});
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await getHomePage();
+      setData(data);
+      // console.log(data);
+    };
+    fetchData();
+  }, []);
+
   return (
     <section id="hero" class="d-flex flex-column justify-content-center">
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
@@ -54,13 +24,13 @@ export default function Home() {
           ></span>
         </p>
         <div class="social-links">
-          {firstPage.links.map((item) => {
-            return (
-              <a href={item.link} class={item.class} target="_blank">
-                <i class={item.icon}></i>
-              </a>
-            );
-          })}
+          <div class="social-links">
+            <a href="https://twitter.com/?lang=en-in" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.facebook.com" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="http://google.com" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="https://www.linkedin.com" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          </div>
         </div>
       </div>
     </section>

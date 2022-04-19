@@ -4,8 +4,8 @@ export default function Fact() {
   const [fact, ] = useState([
     {
       icon: "bi bi-emoji-smile",
-      datacounter: "",
-      title: "Happy Client 1",
+      datacounter: "1200",
+      title: "Happy Client ",
     },
     {
       icon: "bi bi-journal-richtext",
@@ -44,7 +44,7 @@ export default function Fact() {
                   <i class={item.icon}></i>
                   <span
                     data-purecounter-start="0"
-                    data-purecounter-end="232"
+                    data-purecounter-end={item.datacounter}
                     data-purecounter-duration="1"
                     class="purecounter"
                   ></span>
