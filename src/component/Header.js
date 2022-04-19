@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header id="header" className="d-flex flex-column justify-content-center">
+    <header id="header" class="d-flex flex-column justify-content-center">
       <nav id="navbar" class="navbar nav-menu">
         <ul>
           <li>
@@ -14,7 +14,7 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="#Testimonial" class="nav-link scrollto">
+            <a href="#testimonials" class="nav-link scrollto">
               <i class="bx bx-file-blank"></i> <span>Testimonials</span>
             </a>
           </li>
@@ -35,8 +35,6 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      {/* <!-- .nav-menu --> */}
     </header>
-    //   {/* <!-- End Header --> */}
   );
 }
