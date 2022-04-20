@@ -7,7 +7,7 @@ useEffect (() => {
   const fetchData = async () => {
     const { data } = await getAbout();
     setData(data);
-    console.log(data);
+    // console.log(data);
   };
   fetchData();
 }, []);

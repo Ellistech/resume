@@ -11,3 +11,10 @@ export async function getAbout() {
   const { data } = await axios.get("about");
   return data;
 }
+
+
+
+export async function getService() {
+  const { data } = await axios.get("service?populate=*");
+  return data;
+}

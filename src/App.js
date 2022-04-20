@@ -14,6 +14,8 @@ function App() {
     <div>
       <Home />
 
+      <main id="main">
+
       <About />
 
       <Fact />
@@ -28,8 +30,8 @@ function App() {
 
       <Service />
 
-
       <ContactForm />
+      </main>
     </div>
   );
   return <Layout content={page} />;

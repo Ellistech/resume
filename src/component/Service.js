@@ -4,6 +4,21 @@ export default function Service() {
   const [service, setService] = useState([
     {
       icon: "bx bxl-dribbble",
+      iconColour:'icon-box iconbox-blue',
+      title: "Lorem Ipsum ",
+      description:
+        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
+    },
+    {
+      icon: "bx bxl-dribbble",
+      iconColour:'icon-box iconbox-orange',
+      title: "Lorem Ipsum 1",
+      description:
+        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
+    },
+    {
+      icon: "bx bxl-dribbble",
+      iconColour:'icon-box iconbox-pink',
       title: "Lorem Ipsum 1",
       description:
         "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
@@ -11,29 +26,20 @@ export default function Service() {
     {
       icon: "bx bxl-dribbble",
       title: "Lorem Ipsum 1",
+      iconColour:'icon-box iconbox-yellow',
       description:
         "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
     },
     {
       icon: "bx bxl-dribbble",
       title: "Lorem Ipsum 1",
+      iconColour:'icon-box iconbox-teal',
       description:
         "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
     },
     {
       icon: "bx bxl-dribbble",
-      title: "Lorem Ipsum 1",
-      description:
-        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
-    },
-    {
-      icon: "bx bxl-dribbble",
-      title: "Lorem Ipsum 1",
-      description:
-        "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
-    },
-    {
-      icon: "bx bxl-dribbble",
+      iconColour:'icon-box iconbox-red',
       title: "Lorem Ipsum 1",
       description:
         "Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturim ",
@@ -60,7 +66,7 @@ export default function Service() {
                 data-aos="zoom-in"
                 data-aos-delay="100"
               >
-                <div class="icon-box iconbox-blue">
+                <div class={item.iconColour}>
                   <div class="icon">
                     <svg
                       width="100"
