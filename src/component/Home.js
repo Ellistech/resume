@@ -7,7 +7,7 @@ export default function Home() {
     const fetchData = async () => {
       const { data } = await getHomePage();
       setData(data);
-      // console.log(data);
+      // console.log(data); 
     };
     fetchData();
   }, []);
