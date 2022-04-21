@@ -78,23 +78,23 @@ export default function Portfolio() {
     });
   }
   return (
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
+    <section id="portfolio" className="portfolio section-bg">
+      <div className="container" data-aos="fade-up">
+        <div className="section-title">
           <h2>Portfolio</h2>
           <p>
             {portfolio.desciption}
           </p>
         </div>
 
-        <div class="row">
+        <div className="row">
           <div
-            class="col-lg-12 d-flex justify-content-center"
+            className="col-lg-12 d-flex justify-content-center"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             {/* <ul id="portfolio-flters">
-              <li onClick={()=> filterCards('all')} class="filter-active">
+              <li onClick={()=> filterCards('all')} className="filter-active">
                 All
               </li>
               <li onClick={()=> filterCards('app')}>App</li>
@@ -105,39 +105,39 @@ export default function Portfolio() {
         </div>
 
         <div
-          class="row portfolio-container"
+          className="row portfolio-container"
           data-aos="fade-up"
           data-aos-delay="200"
         >
           {
-            portfolio.links.map(item => {
+            portfolio.links.map((item  , index)=> {
               return (
-                <div class="col-lg-4 col-md-6 portfolio-item">
-                  <div class="portfolio-wrap">
+                <div className="col-lg-4 col-md-6 portfolio-item" key={index}>
+                  <div className="portfolio-wrap">
                     <img
                       src={item.image}
-                      class="img-fluid"
+                      className="img-fluid"
                       alt=""
                     />
-                    <div class="portfolio-info">
+                    <div className="portfolio-info">
                       <h4>{item.title}</h4>
                       <p>{item.subTitle}</p>
-                      <div class="portfolio-links">
+                      <div className="portfolio-links">
                         <a
                           href={item.image}
                           data-gallery="portfolioGallery"
-                          class="portfolio-lightbox"
+                          className="portfolio-lightbox"
                           title="App 1"
                         >
-                          <i class="bx bx-plus"></i>
+                          <i className="bx bx-plus"></i>
                         </a>
                         <a
                           href="portfolio-details.html"
-                          class="portfolio-details-lightbox"
+                          className="portfolio-details-lightbox"
                           data-glightbox="type: external"
                           title="Portfolio Details"
                         >
-                          <i class="bx bx-link"></i>
+                          <i className="bx bx-link"></i>
                         </a>
                       </div>
                     </div>

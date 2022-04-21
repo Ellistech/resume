@@ -18,61 +18,61 @@ export default function ContactForm() {
 
   return (
     //    {/* <!-- ======= Contact Section ======= --> */}
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
+    <section id="contact" className="contact">
+      <div className="container" data-aos="fade-up">
+        <div className="section-title">
           <h2>Contact</h2>
         </div>
 
-        <div class="row mt-1">
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
+        <div className="row mt-1">
+          <div className="col-lg-4">
+            <div className="info">
+              <div className="address">
+                <i className="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
                 <p>Haridwar</p>
               </div>
 
-              <div class="email">
-                <i class="bi bi-envelope"></i>
+              <div className="email">
+                <i className="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <p>devanshuchauhan1603@gmail.com</p>
               </div>
 
-              <div class="phone">
-                <i class="bi bi-phone"></i>
+              <div className="phone">
+                <i className="bi bi-phone"></i>
                 <h4>Call:</h4>
                 <p>6966665229</p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-8 mt-5 mt-lg-0">
+          <div className="col-lg-8 mt-5 mt-lg-0">
             <form
               action="forms/contact.php"
               method="post"
               role="form"
-              class="php-email-form"
+              className="php-email-form"
               onSubmit={handlesubmit}
               noValidate
             >
-              <div class="row">
-                <div class="col-md-6 form-group">
+              <div className="row">
+                <div className="col-md-6 form-group">
                   <input
                     type="text"
                     name="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    class="form-control"
+                    className="form-control"
                     id="name"
                     placeholder="Your Name"
                     required
                   />
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
+                <div className="col-md-6 form-group mt-3 mt-md-0">
                   <input
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     name="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -82,10 +82,10 @@ export default function ContactForm() {
                   />
                 </div>
               </div>
-              <div class="form-group mt-3">
+              <div className="form-group mt-3">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   name="subject"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
@@ -94,9 +94,9 @@ export default function ContactForm() {
                   required
                 />
               </div>
-              <div class="form-group mt-3">
+              <div className="form-group mt-3">
                 <textarea
-                  class="form-control"
+                  className="form-control"
                   name="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -105,14 +105,14 @@ export default function ContactForm() {
                   required
                 ></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">
+              <div className="my-3">
+                <div className="loading">Loading</div>
+                <div className="error-message"></div>
+                <div className="sent-message">
                   Your message has been sent. Thank you!
                 </div>
               </div>
-              <div class="text-center">
+              <div className="text-center">
                 <button type="submit">Send Message</button>
               </div>
             </form>

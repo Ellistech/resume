@@ -13,23 +13,23 @@ export default function Home() {
   }, []);
 
   return (
-    <section id="hero" class="d-flex flex-column justify-content-center">
-      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+    <section id="hero" className="d-flex flex-column justify-content-center">
+      <div className="container" data-aos="zoom-in" data-aos-delay="100">
         <h1>{data?.attributes?.title}</h1>
         <p>
           {data?.attributes?.name}
           <span
-            class="typed"
+            className="typed"
             data-typed-items="Designer, Developer, Freelancer, Photographer"
           ></span>
         </p>
-        <div class="social-links">
-          <div class="social-links">
-            <a href="https://twitter.com/?lang=en-in" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="https://www.facebook.com" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="https://www.instagram.com" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="https://www.skype.com/en" class="google-plus"><i class="bx bxl-skype"></i></a>
-            <a href="https://www.linkedin.com" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <div className="social-links">
+          <div className="social-links">
+            <a href="https://twitter.com/?lang=en-in" className="twitter"><i className="bx bxl-twitter"></i></a>
+            <a href="https://www.facebook.com" className="facebook"><i className="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com" className="instagram"><i className="bx bxl-instagram"></i></a>
+            <a href="https://www.skype.com/en" className="google-plus"><i className="bx bxl-skype"></i></a>
+            <a href="https://www.linkedin.com" className="linkedin"><i className="bx bxl-linkedin"></i></a>
           </div>
         </div>
       </div>

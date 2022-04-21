@@ -24,9 +24,9 @@ export default function Fact() {
     },
   ]);
   return (
-    <section id="facts" class="facts">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
+    <section id="facts" className="facts">
+      <div className="container" data-aos="fade-up">
+        <div className="section-title">
           <h2>Facts</h2>
           <p>
             Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
@@ -36,17 +36,17 @@ export default function Fact() {
           </p>
         </div>
 
-        <div class="row">
-          {fact.map((item) => {
+        <div className="row">
+          {fact.map((item , index) => {
             return (
-              <div class="col-lg-3 col-md-6">
-                <div class="count-box">
-                  <i class={item.icon}></i>
+              <div className="col-lg-3 col-md-6" key={index}>
+                <div className="count-box">
+                  <i className={item.icon}></i>
                   <span
                     data-purecounter-start="0"
                     data-purecounter-end={item.datacounter}
                     data-purecounter-duration="1"
-                    class="purecounter"
+                    className="purecounter"
                   ></span>
                   <p>{item.title}</p>
                 </div>
