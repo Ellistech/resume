@@ -7,7 +7,7 @@ export default function Service() {
     const fetchData = async () => {
       const { data } = await getService();
       setService(data);
-      console.log(data);
+      // console.log(data);
     };
     fetchData();
   }, []);

@@ -14,13 +14,13 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="#testimonials" className="nav-link scrollto">
-              <i className="bx bx-file-blank"></i> <span>Testimonials</span>
+            <a href="#portfolio" className="nav-link scrollto">
+              <i className="bx bx-book-content"></i> <span>Portfolio</span>
             </a>
           </li>
           <li>
-            <a href="#portfolio" className="nav-link scrollto">
-              <i className="bx bx-book-content"></i> <span>Portfolio</span>
+            <a href="#testimonials" className="nav-link scrollto">
+              <i className="bx bx-file-blank"></i> <span>Testimonials</span>
             </a>
           </li>
           <li>

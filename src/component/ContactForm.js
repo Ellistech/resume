@@ -1,11 +1,16 @@
 import { useState } from "react";
+import { postContact } from "../service/data.service";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function ContactForm() {
+  const notify = () => toast("Message sent successfully " );   
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const handlesubmit = function (event) {
+  const handlesubmit =  async function (event) {
     event.preventDefault();
     const contactList = {
       name,
@@ -13,7 +18,8 @@ export default function ContactForm() {
       subject,
       message,
     };
-    console.log(contactList);
+    const response = await postContact(contactList);
+    // console.log(response);
   };
 
   return (
@@ -54,7 +60,7 @@ export default function ContactForm() {
               role="form"
               className="php-email-form"
               onSubmit={handlesubmit}
-              noValidate
+              // noValidate
             >
               <div className="row">
                 <div className="col-md-6 form-group">
@@ -113,7 +119,8 @@ export default function ContactForm() {
                 </div>
               </div>
               <div className="text-center">
-                <button type="submit">Send Message</button>
+                <button type="submit" onClick={notify}>Send Message</button>
+                <ToastContainer />
               </div>
             </form>
           </div>

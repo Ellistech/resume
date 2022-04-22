@@ -18,3 +18,12 @@ export async function getService() {
   const { data } = await axios.get("service?populate=*");
   return data;
 }
+
+
+
+export async function postContact(body) {
+  const { data } = await axios.post("contacts", {
+    data: body
+  });
+  return data;
+}
