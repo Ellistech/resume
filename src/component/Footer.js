@@ -1,17 +1,17 @@
 export default  function Footer (){
     return (
     <footer id="footer">
-    <div class="container">
+    <div className="container">
       <h3>Devanshu Chauhan</h3>
       <p>(Ellistech)</p>
-      <div class="social-links">
-          <a href="https://twitter.com/?lang=en-in" class="twitter"><i class="bx bxl-twitter"></i></a>
-             <a href="https://www.facebook.com" class="facebook"><i class="bx bxl-facebook"></i></a>
-             <a href="https://www.instagram.com" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="http://google.com" class="google-plus"><i class="bx bxl-skype"></i></a>
-             <a href="https://www.linkedin.com" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      <div className="social-links">
+          <a href="https://twitter.com/?lang=en-in" className="twitter"><i className="bx bxl-twitter"></i></a>
+             <a href="https://www.facebook.com" className="facebook"><i className="bx bxl-facebook"></i></a>
+             <a href="https://www.instagram.com" className="instagram"><i className="bx bxl-instagram"></i></a>
+            <a href="http://google.com" className="google-plus"><i className="bx bxl-skype"></i></a>
+             <a href="https://www.linkedin.com" className="linkedin"><i className="bx bxl-linkedin"></i></a>
           </div>
-      <div class="copyright">
+      <div className="copyright">
         &copy; Copyright <strong><span>_____</span></strong> All Rights Reserved
       </div>
         </div>

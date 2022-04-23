@@ -27,3 +27,11 @@ export async function postContact(body) {
   });
   return data;
 }
+
+
+
+export async function getTestimonial() {
+  const { data } = await axios.get("testimonial?populate=*");
+  return data;
+}
+
