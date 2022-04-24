@@ -7,7 +7,7 @@ export default function Service() {
     const fetchData = async () => {
       const { data } = await getService();
       setService(()=>({...data}));
-      console.log(data);
+      // console.log(data);
     };
     fetchData();
   }, []);
@@ -16,12 +16,9 @@ export default function Service() {
     <section id="services" className="services">
       <div className="container" data-aos="fade-up">
         <div className="section-title">
-          <h2>Services</h2>
+          <h2>{service?.attributes?.text}</h2>
           <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
+            {service?.attributes?.description}
           </p>
         </div>
 

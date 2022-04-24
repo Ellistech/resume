@@ -1,54 +1,41 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getFact } from "../service/data.service";
 
 export default function Fact() {
-  const [fact, ] = useState([
-    {
-      icon: "bi bi-emoji-smile",
-      datacounter: "1200",
-      title: "Happy Client ",
-    },
-    {
-      icon: "bi bi-journal-richtext",
-      datacounter: "",
-      title: "Project",
-    },
-    {
-      icon: "bi bi-headset",
-      datacounter: "",
-      title: "Hour of support",
-    },
-    {
-      icon: "bi bi-award",
-      datacounter: "",
-      title: "Award",
-    },
-  ]);
+  const [fact, setFact] = useState({});
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await getFact();
+      setFact(() => ({ ...data }));
+      // console.log(data);
+    };
+    fetchData();
+  }, []);
+
+
   return (
     <section id="facts" className="facts">
       <div className="container" data-aos="fade-up">
         <div className="section-title">
-          <h2>Facts</h2>
+          <h2>{fact?.attributes?.title}</h2>
           <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
+            {fact?.attributes?.description}
           </p>
         </div>
 
         <div className="row">
-          {fact.map((item , index) => {
+          {fact?.attributes?.fact?.map((data, index) => {
             return (
               <div className="col-lg-3 col-md-6" key={index}>
                 <div className="count-box">
-                  <i className={item.icon}></i>
+                  <i className={data?.icon}></i>
                   <span
-                    data-purecounter-start="0"
-                    data-purecounter-end={item.datacounter}
+                    data-purecounter-start={data.counterStart}
+                    data-purecounter-end={data.counterEnd}
                     data-purecounter-duration="1"
                     className="purecounter"
                   ></span>
-                  <p>{item.title}</p>
+                  <p>{data?.subtitle}</p>
                 </div>
               </div>
             );

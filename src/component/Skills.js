@@ -1,3 +1,7 @@
+import { Progress } from 'react-sweet-progress';
+import "react-sweet-progress/lib/style.css";
+
+
 export default function Skills() {
   return (
     <section id="skills" className="skills section-bg">
@@ -16,46 +20,40 @@ export default function Skills() {
           <div className="col-lg-6">
             <div className="progress">
               <span className="skill">
-                HTML <i className="val">100%</i>
+                HTML <i className="val"></i>
               </span>
               <div className="progress-bar-wrap">
-                <div
-                  className="progress-bar"
+                <Progress
                   role="progressbar"
-                  aria-valuenow="100"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
+                  percent={80}
+                  status="active"
+                />
               </div>
             </div>
 
             <div className="progress">
               <span className="skill">
-                CSS <i className="val">90%</i>
+                CSS <i className="val"></i>
               </span>
               <div className="progress-bar-wrap">
-                <div
-                  className="progress-bar"
+              <Progress
                   role="progressbar"
-                  aria-valuenow="90"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
+                  percent={70}
+                  status="active"
+                />
               </div>
             </div>
 
             <div className="progress">
               <span className="skill">
-                JavaScript <i className="val">75%</i>
+                JavaScript <i className="val"></i>
               </span>
               <div className="progress-bar-wrap">
-                <div
-                  className="progress-bar"
+              <Progress
                   role="progressbar"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
+                  percent={70}
+                  status="active"
+                />
               </div>
             </div>
           </div>
@@ -63,46 +61,40 @@ export default function Skills() {
           <div className="col-lg-6">
             <div className="progress">
               <span className="skill">
-                PHP <i className="val">80%</i>
+                PHP <i className="val"></i>
               </span>
               <div className="progress-bar-wrap">
-                <div
-                  className="progress-bar"
+              <Progress
                   role="progressbar"
-                  aria-valuenow="80"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
+                  percent={50}
+                  status="active"
+                />
               </div>
             </div>
 
             <div className="progress">
               <span className="skill">
-                WordPress/CMS <i className="val">90%</i>
+                WordPress/CMS <i className="val"></i>
               </span>
               <div className="progress-bar-wrap">
-                <div
-                  className="progress-bar"
+              <Progress
                   role="progressbar"
-                  aria-valuenow="90"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
+                  percent={37}
+                  status="active"
+                />
               </div>
             </div>
 
             <div className="progress">
               <span className="skill">
-                Photoshop <i className="val">55%</i>
+                Photoshop <i className="val"></i>
               </span>
               <div className="progress-bar-wrap">
-                <div
-                  className="progress-bar"
+              <Progress
                   role="progressbar"
-                  aria-valuenow="55"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
+                  percent={55}
+                  status="active"
+                />
               </div>
             </div>
           </div>

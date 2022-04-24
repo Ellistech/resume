@@ -35,3 +35,11 @@ export async function getTestimonial() {
   return data;
 }
 
+
+
+
+export async function getFact() {
+  const { data } = await axios.get("fact?populate=*");
+  return data;
+}
+

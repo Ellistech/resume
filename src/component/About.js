@@ -40,7 +40,7 @@ useEffect (() => {
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>
-                    <strong>Website:</strong> <span>www.example.com</span>
+                    <strong>Website:</strong> <span>{data?.attributes?.website}</span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>
