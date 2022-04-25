@@ -48,7 +48,7 @@ export default function ContactForm() {
               <div className="phone">
                 <i className="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>6966665229</p>
+                <p>63966665229 , 8057789565</p>
               </div>
             </div>
           </div>

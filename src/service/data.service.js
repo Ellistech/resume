@@ -37,9 +37,14 @@ export async function getTestimonial() {
 
 
 
-
 export async function getFact() {
   const { data } = await axios.get("fact?populate=*");
+  return data;
+}
+
+
+export async function getSkill() {
+  const { data } = await axios.get("skill?populate=*");
   return data;
 }
 

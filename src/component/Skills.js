@@ -1,103 +1,71 @@
 import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
+import { useState, useEffect } from "react";
+import { getSkill } from "../service/data.service";
+
 
 
 export default function Skills() {
+  const [skill, setSkill] = useState({});
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await getSkill();
+      setSkill(() => ({ ...data }));
+      console.log(data);
+    };
+    fetchData();
+  }, []);
+
+
   return (
     <section id="skills" className="skills section-bg">
       <div className="container" data-aos="fade-up">
         <div className="section-title">
-          <h2>Skills</h2>
+          <h2>{skill?.attributes?.title}</h2>
           <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
+           {skill?.attributes?.description}
           </p>
         </div>
 
         <div className="row skills-content">
           <div className="col-lg-6">
-            <div className="progress">
+          {skill?.attributes?.skills?.map((data, index) => { 
+            return (
+              <div className="progress" key={index}>
               <span className="skill">
-                HTML <i className="val"></i>
+                {data.skillName} <i className="val"></i>
               </span>
               <div className="progress-bar-wrap">
                 <Progress
                   role="progressbar"
-                  percent={80}
+                  percent={data.percentage}
                   status="active"
                 />
               </div>
             </div>
-
-            <div className="progress">
-              <span className="skill">
-                CSS <i className="val"></i>
-              </span>
-              <div className="progress-bar-wrap">
-              <Progress
-                  role="progressbar"
-                  percent={70}
-                  status="active"
-                />
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">
-                JavaScript <i className="val"></i>
-              </span>
-              <div className="progress-bar-wrap">
-              <Progress
-                  role="progressbar"
-                  percent={70}
-                  status="active"
-                />
-              </div>
-            </div>
+            );
+          }
+          )}
           </div>
-
-          <div className="col-lg-6">
-            <div className="progress">
+          {/* <div className="col-lg-6">
+          {skill?.attributes?.skills?.map((data, index) => { 
+            return (
+              <div className="progress" key={index}>
               <span className="skill">
-                PHP <i className="val"></i>
+                {data.skillName} <i className="val"></i>
               </span>
               <div className="progress-bar-wrap">
-              <Progress
+                <Progress
                   role="progressbar"
-                  percent={50}
+                  percent={data.percent}
                   status="active"
                 />
               </div>
             </div>
-
-            <div className="progress">
-              <span className="skill">
-                WordPress/CMS <i className="val"></i>
-              </span>
-              <div className="progress-bar-wrap">
-              <Progress
-                  role="progressbar"
-                  percent={37}
-                  status="active"
-                />
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">
-                Photoshop <i className="val"></i>
-              </span>
-              <div className="progress-bar-wrap">
-              <Progress
-                  role="progressbar"
-                  percent={55}
-                  status="active"
-                />
-              </div>
-            </div>
-          </div>
+            );
+          }      
+          )}
+          </div> */}
         </div>
       </div>
     </section>
