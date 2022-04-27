@@ -16,7 +16,7 @@ export default function Service() {
     <section id="services" className="services">
       <div className="container" data-aos="fade-up">
         <div className="section-title">
-          <h2>{service?.attributes?.text}</h2>
+          <h2>{service?.attributes?.title}</h2>
           <p>
             {service?.attributes?.description}
           </p>

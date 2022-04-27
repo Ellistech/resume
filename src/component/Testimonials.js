@@ -11,7 +11,7 @@ export default function Testimonials() {
     const fetchData = async () => {
       const { data } = await getTestimonial();
       setTestimonial(() => ({ ...data }));
-      console.log(data);
+      // console.log(data);
     };
     fetchData();
   }, []);
@@ -30,8 +30,8 @@ export default function Testimonials() {
            
               {testimonial?.attributes?.testimonial?.map((data, index) => {
                 return (
-                  <div className="swiper-slide">
-                  <div className="testimonial-item" key={index}>
+                  <div className="swiper-slide" key={index}>
+                  <div className="testimonial-item" >
                     <img src="assets/img/icon.jpg" className="testimonial-img" alt="" />
                     <h3>{data?.name}</h3>
                     <h4>{data?.role}</h4>

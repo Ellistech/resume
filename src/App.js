@@ -15,22 +15,14 @@ function App() {
       <Home />
 
       <main id="main">
-
-      <About />
-
-      <Fact />
-
-      <Skills />
-
-      {/* <Resume /> */}
-
-      <Portfolio />
-      
-      <Testimonials />
-
-      <Service />
-
-      <ContactForm />
+        <About />
+        <Fact />
+        <Skills />
+        {/* <Resume /> */}
+        <Portfolio />
+        <Testimonials />
+        <Service />
+        <ContactForm />
       </main>
     </div>
   );

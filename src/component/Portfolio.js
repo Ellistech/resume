@@ -32,32 +32,14 @@ export default function Portfolio() {
         image: "assets/img/portfolio/portfolio-5.jpg",
         title: "App 1",
         subTitle: "App",
-        type: 'app',
+        type: 'web',
       },
       {
         image: "assets/img/portfolio/portfolio-6.jpg",
         title: "App 1",
         subTitle: "App",
-        type: 'app',
-      },
-      {
-        image: "assets/img/portfolio/portfolio-7.jpg",
-        title: "App 1",
-        subTitle: "App",
-        type: 'app',
-      },
-      {
-        image: "assets/img/portfolio/portfolio-8.jpg",
-        title: "App 1",
-        subTitle: "App",
         type: 'web',
-      },
-      {
-        image: "assets/img/portfolio/portfolio-9.jpg",
-        title: "App 1",
-        subTitle: "App",
-        type: 'app',
-      },
+      },  
     ]
   }
   const [portfolio, setPortfolio] = useState(data);

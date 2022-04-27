@@ -11,7 +11,7 @@ export default function Skills() {
     const fetchData = async () => {
       const { data } = await getSkill();
       setSkill(() => ({ ...data }));
-      console.log(data);
+      // console.log(data);
     };
     fetchData();
   }, []);

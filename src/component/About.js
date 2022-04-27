@@ -16,7 +16,7 @@ useEffect (() => {
     <section id="about" className="about">
       <div className="container" data-aos="fade-up">
         <div className="section-title">
-          <h2>About</h2>
+          <h2>{data?.attributes?.title}</h2>
           <p>
             {data?.attributes?.description}
           </p>
